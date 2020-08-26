@@ -15,6 +15,15 @@ CREATE TABLE clientes(
 	email VARCHAR(18) NOT NULL
 )ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+endpoints: 
+Lista de todos cliente -GET : http://localhost/rest/api/clientes 
+
+Buscar cliente por id -GET : http://localhost/rest/api/clientes/ID_cliente 
+
+Adicionar cliente (no corpo da requisição deve ter um objeto cliente)- POST: http://localhost/rest/api/clientes   
+
+Editar cliente (passamos o cliente como parametros) - PUT: http://localhost/rest/api/clientes/ID_CLIENTE/?nome=Valor&email=Valor&telefone=Valor 
+
 Front-end:
 
 Na aplicação client-side foi contruida com Angular 10 para rodar localmente
