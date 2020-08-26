@@ -2,6 +2,8 @@ Back-end:
 O server-side foi feito com codeigniter com ajuda do framework composer
 restserver para poder construir uma API REST com php.
 
+Observação: Se tiver problemas com as chamadas vericar se BASE_URL está no dominio correto.
+
 Documentação: https://github.com/chriskacerguis/codeigniter-restserver
 
 Tabela criada no phpmyadmin:
