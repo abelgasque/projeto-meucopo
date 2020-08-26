@@ -28,6 +28,8 @@ Como o backend vai estar em um servidor temos que mudar o
 caminho da api com diretorio raiz do angular no arquivo "proxy.config.js"
 
 De:
+
+
 const PROXY_CONFIG = [
     {
         context: ['/chamada'],
@@ -38,10 +40,11 @@ const PROXY_CONFIG = [
 
     }
 ];
-
 module.exports = PROXY_CONFIG;
 
 para:
+
+
 const PROXY_CONFIG = [
     {
         context: ['/chamada'],
@@ -52,5 +55,4 @@ const PROXY_CONFIG = [
 
     }
 ];
-
 module.exports = PROXY_CONFIG;
