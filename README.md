@@ -2,6 +2,8 @@ Back-end:
 O server-side foi feito com codeigniter com ajuda do framework composer
 restserver para poder construir uma API REST com php.
 
+Observação: Se tiver problemas com as chamadas verificar se BASE_URL está configurada no dominio correto.
+
 Documentação: https://github.com/chriskacerguis/codeigniter-restserver
 
 Tabela criada no phpmyadmin:
@@ -12,6 +14,15 @@ CREATE TABLE clientes(
 	telefone VARCHAR(64) NOT NULL, 
 	email VARCHAR(18) NOT NULL
 )ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+endpoints: 
+Lista de todos cliente -GET : http://localhost/rest/api/clientes 
+
+Buscar cliente por id -GET : http://localhost/rest/api/clientes/ID_cliente 
+
+Adicionar cliente (no corpo da requisição deve ter um objeto cliente)- POST: http://localhost/rest/api/clientes   
+
+Editar cliente (passamos o cliente como parametros) - PUT: http://localhost/rest/api/clientes/ID_CLIENTE/?nome=Valor&email=Valor&telefone=Valor 
 
 Front-end:
 
@@ -28,6 +39,8 @@ Como o backend vai estar em um servidor temos que mudar o
 caminho da api com diretorio raiz do angular no arquivo "proxy.config.js"
 
 De:
+
+
 const PROXY_CONFIG = [
     {
         context: ['/chamada'],
@@ -38,10 +51,11 @@ const PROXY_CONFIG = [
 
     }
 ];
-
 module.exports = PROXY_CONFIG;
 
 para:
+
+
 const PROXY_CONFIG = [
     {
         context: ['/chamada'],
@@ -52,5 +66,4 @@ const PROXY_CONFIG = [
 
     }
 ];
-
 module.exports = PROXY_CONFIG;
